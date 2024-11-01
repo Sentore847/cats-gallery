@@ -34,11 +34,11 @@ const MainPage: React.FC = () => {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold text-center mb-4">Main Page</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {data.map((cat) => (
           <div
             key={cat.id}
-            className="border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+            className="border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105  grid grid-rows-[auto,1fr,auto]"
           >
             {cat.image ? (
               <img
@@ -51,14 +51,14 @@ const MainPage: React.FC = () => {
                 <span>No Image Available</span>
               </div>
             )}
-            <div className="p-4">
+            <div className="p-4 flex flex-col justify-between">
               <h2 className="text-lg font-semibold">{cat.name}</h2>
               <p className="text-gray-600">
-                {cat.description.length > 130
-                  ? `${cat.description.slice(0, 130)}...`
+                {cat.description.length > 165
+                  ? `${cat.description.slice(0, 165)}...`
                   : cat.description}
               </p>
-              <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+              <button className="mt-auto w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
                 Add to favorites
               </button>
             </div>
