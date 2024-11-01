@@ -3,7 +3,9 @@ import AppRouter from "./routers/AppRouter";
 const App: React.FC = () => {
   return (
     <>
-      <h1>Cats Gallery</h1>
+      <div className="py-10">
+        <h1 className="font-bold text-3xl text-center">Cats Gallery</h1>
+      </div>
       <AppRouter />
     </>
   );
