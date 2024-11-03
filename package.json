@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sentore847.github.io/cats-gallery",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.59.16",
