@@ -15,4 +15,5 @@ export default defineConfig({
       styles: "/src/styles",
     },
   },
+  base: "/cats-gallery",
 });
