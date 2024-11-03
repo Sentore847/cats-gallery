@@ -11,6 +11,7 @@ export default defineConfig({
       features: "/src/features",
       assets: "/src/assets",
       hooks: "/src/hooks",
+      widgets: "/src/widgets",
       styles: "/src/styles",
     },
   },
